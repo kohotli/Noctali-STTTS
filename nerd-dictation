@@ -1854,7 +1854,7 @@ def argparse_create_begin(subparsers: "argparse._SubParsersAction[argparse.Argum
             pulse_device_name=args.pulse_device_name,
             sample_rate=args.sample_rate,
             input_method=args.input_method,
-            progressive=not (args.defer_output or args.output == "STDOUT"),
+            progressive=not (args.defer_output or args.output == "STDOUT" or args.output == "PIPER"),
             progressive_continuous=args.progressive_continuous,
             full_sentence=args.full_sentence,
             numbers_as_digits=args.numbers_as_digits,
