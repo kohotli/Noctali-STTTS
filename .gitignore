@@ -5,5 +5,8 @@
 __pycache__/
 *.py[cod]
 
+# Virtual Environment
+.venv/
+
 # Fallback location used for the language model.
 /model

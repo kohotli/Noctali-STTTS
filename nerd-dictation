@@ -16,6 +16,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import noctali_sttts as noctali
 
 # Types.
 from typing import (
@@ -1438,6 +1439,12 @@ def main_begin(
                 sys.stdout.write("\x08" * delete_prev_chars)
             sys.stdout.write(text)
 
+    elif output == "PIPER":
+
+        def handle_fn(delete_prev_chars: int, text: str) -> None:
+            noctali.play_text(delete_prev_chars, text)
+            return
+
     else:
         # Unreachable.
         assert False
@@ -1783,7 +1790,7 @@ def argparse_create_begin(subparsers: "argparse._SubParsersAction[argparse.Argum
         "--output",
         dest="output",
         default="SIMULATE_INPUT",
-        choices=("SIMULATE_INPUT", "STDOUT"),
+        choices=("SIMULATE_INPUT", "STDOUT", "PIPER"),
         metavar="OUTPUT_METHOD",
         help=(
             "Method used to at put the result of speech to text.\n"
