@@ -105,6 +105,7 @@ Install
 .. code-block:: sh
 
    pip3 install vosk
+   pip3 install piper-tts
    git clone https://github.com/ideasman42/nerd-dictation.git
    cd nerd-dictation
    wget https://alphacephei.com/kaldi/models/vosk-model-small-en-us-0.15.zip
