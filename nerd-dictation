@@ -1789,7 +1789,7 @@ def argparse_create_begin(subparsers: "argparse._SubParsersAction[argparse.Argum
     subparse.add_argument(
         "--output",
         dest="output",
-        default="SIMULATE_INPUT",
+        default="PIPER",
         choices=("SIMULATE_INPUT", "STDOUT", "PIPER"),
         metavar="OUTPUT_METHOD",
         help=(
